@@ -94,7 +94,13 @@ index.post('/user-signup',(req,res)=>{
                     );
                     res.redirect('/login');
                   })
-                  .catch(err => console.log(err));
+                  .catch(err =>{
+                    res.render('index_sign_up',{
+                      title : 'Sign Up',
+                      condition : true,
+                      error : 'Something Went Wrong Please Try Again'
+                    })
+                  });
               });
             });
           }
@@ -120,7 +126,13 @@ index.post('/contact',(req,res)=>{
       condition : true,
       title : 'Contact'
     })
-  }).catch(err => console.log(err));
+  }).catch(err =>{
+    res.render('contact',{
+      error : 'Message Not Send Please Type Something in Message or Title',
+      condition : true,
+      title : 'Contact'
+    })
+  });
 })
 
 

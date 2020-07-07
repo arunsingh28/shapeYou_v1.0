@@ -994,6 +994,9 @@ border-left: 16px solid #4CAF50;
     .bg_hero svg{
       display: none;
     }
+    .change{
+      transform: translateX(0px);
+    }
     .name{
       left: 48%;
     }
@@ -1005,7 +1008,6 @@ border-left: 16px solid #4CAF50;
     }
     .menu{
       width: 213px;
-      height: 300px;
     }
     .login_form{
       width: 96%;
@@ -1091,8 +1093,11 @@ border-left: 16px solid #4CAF50;
     .footer-call-to-action-link-wrapper a{
       padding-left: 40px;
     }
-    .footer-call-to-action-title{
-
+    .menu ul li:hover .arrow{
+      transform: translateX(80px);
+    }
+    .menu ul{
+      width: 94.6%;
     }
   }
 
