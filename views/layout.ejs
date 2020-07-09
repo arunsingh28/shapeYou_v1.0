@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/Dash.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
   </head>
   <body>
@@ -28,6 +29,10 @@
       $('.alert').fadeOut(300)
     },4000)
 
+    // close
+    $('.close').click(()=>{
+    $('.login_form').toggleClass('fade');
+})
   });
       </script>
   </body>

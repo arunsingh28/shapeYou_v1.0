@@ -340,8 +340,9 @@
     transition: .3s ease-in;
   }
   .fade{
-    z-index: 999999999;
-   opacity: 1;
+  z-index: 999999999;
+  opacity: 1;
+  position: fixed;
   }
 /* sign-in */
 .login_form .form{
@@ -429,8 +430,8 @@ transform: translate(-50%,-50%);
 }
 .inputs{
   position: absolute;
-  top:60%;
-  left: 30%;
+  top:40%;  /*   41% , 33% */
+  left: 29%;
   transform: translate(-50%,-50%);
 }
 input{
@@ -442,24 +443,26 @@ input{
   border-radius: 4px;
   padding-left: 10px;
   font-family: 'Teko',sans-serif;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
 }
 input::placeholder{
   font-family: 'Teko',sans-serif;
 }
 .forgot{
+  width: 100%;
   position: absolute;
   top: 83%;
-  left: 50%;
+  left: 70%;
   transform: translate(-50%,-50%);
 }
 .forgot p{
   font-family: 'Teko',sans-serif;
 }
 .button_sign_in{
+  width: 100%;
   position: absolute;
-  top: 94%;
-  left: 50%;
+  top: 62%;
+  left: 80%;
   transform: translate(-50%,-50%);
 }
 .button_sign_in button{
@@ -593,6 +596,28 @@ input::placeholder{
 .sign_up_jumbo a button:hover{
   background-size: 100%;
   transform: translateY(-5px);
+}
+.sing_in_content .close{
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: -24px;
+  right: -20px;
+  display: flex;
+  padding: 0px 0px 0px 12px;
+  cursor: pointer;
+}
+.closeLine{
+  height: 30px;
+  width: 1px ;
+  background: #fff;
+  transform: translateX(-10px);
+}
+.line1{
+  transform: rotate(45deg);
+}
+.line2{
+  transform: rotate(-45deg);
 }
 
 /* footer */
@@ -907,7 +932,7 @@ input::placeholder{
    
   }
 .sign-up-page{
-  height: 140vh !important;
+  height: 210vh !important;
   width: 100%;
   background-image: linear-gradient(50deg,rgb(51, 209, 214),rgb(204, 36, 255)) !important;
   color: rgb(255, 255, 255);
@@ -1075,7 +1100,7 @@ border-left: 16px solid #4CAF50;
       margin-right: 17px;
     }
     .sign-up-page{
-      height: 106vh !important;
+      height: 160vh !important;
     }
     #signup-btn{
       padding: 8px 70px 8px 70px;

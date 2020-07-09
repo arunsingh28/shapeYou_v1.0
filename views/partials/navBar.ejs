@@ -8,13 +8,17 @@
           </div>
         </div>
       <div class="name">Shape<span>Y</span>ou</div>
-     <% if (condition) { %> <div class="login"><button id="login">Login</button></div><% } %>
+     <% if (condition) { %> <div class="login"><button id="login">Login <i class="fas fa-sign-in-alt"></i></button></div><% } %>
   </nav>
   <div class="login_form">
       <div class="form">
          <div class="sign_in">
               <div class="inner_sign_in">
                   <div class="sing_in_content">
+                    <div class="close">
+                        <div class="closeLine line1"></div>
+                        <div class="closeLine line2"></div>
+                    </div>
                       <div class="heading_sign_in">
                           <p>Hello, There</p>
                           <p id="detail">Enter your personal details and start journey<br> with us.</p>
@@ -32,20 +36,20 @@
                       <div class="heading_sign_up">
                           <p>Sign In</p>
                       </div>
-                      <div class="social_media_link">
+                      <!-- <div class="social_media_link">
                           <i class="fab fa-instagram fa-2x"></i>
                           <i class="fab fa-twitter fa-2x"></i>
                           <i class="fab fa-facebook fa-2x"></i>
-                      </div>
-                       <div class="account">
+                      </div> -->
+                       <!-- <div class="account">
                           <p>Or use you your account</p>
-                       </div>
+                       </div> -->
                        <div class="inputs">
                            <input type="text" name="email" placeholder="Email" id="email"><br>
                            <input type="password" name="password" placeholder="Password" id="password">
                        </div>
                        <div class="forgot">
-                          <p>I Forgot my Password</p>
+                          <!-- <p>I Forgot my Password</p> -->
                        </div>
                        <div class="button_sign_in">
                            <button type="submit">Sign in</button>
@@ -77,50 +81,47 @@
     </div>
     <ul>
         <a href="/">
-            <li>Home
+            <li><i class="fas fa-home"></i> Home
                 <svg class="w-4 h-4 ml-2 arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>
                 </svg>
                 </li></a>
-          <li>Blogs
+         <a href="/blogs">
+            <li><i class="fas fa-blog"></i> Blogs
+                <svg class="w-4 h-4 ml-2 arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                </svg>
+                </li>
+        </a>
+        <li><i class="fas fa-restroom"></i> Reviews
         <svg class="w-4 h-4 ml-2 arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="M12 5l7 7-7 7"></path>
         </svg>
         </li>
-        <li>Blogs
-        <svg class="w-4 h-4 ml-2 arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14"></path>
-            <path d="M12 5l7 7-7 7"></path>
-        </svg>
-        </li>
-        <li>Reviews
-        <svg class="w-4 h-4 ml-2 arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14"></path>
-            <path d="M12 5l7 7-7 7"></path>
-        </svg>
-        </li>
-        <li>Plans
-        <svg class="w-4 h-4 ml-2  arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14"></path>
-            <path d="M12 5l7 7-7 7"></path>
-        </svg>
-        </li>
-        <li>Results
+        <a href="/plans">
+            <li><i class="fas fa-file-signature"></i> Plans
+                <svg class="w-4 h-4 ml-2  arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                </svg>
+                </li></a>
+        <li><i class="fas fa-poll"></i> Results
          <svg class="w-4 h-4 ml-2  arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="M12 5l7 7-7 7"></path>
         </svg>
         </li>
-        <li>About us
+        <li><i class="fas fa-sitemap"></i> About us
         <svg class="w-4 h-4 ml-2 arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>
             <path d="M12 5l7 7-7 7"></path>
         </svg>
         </li>
        <a href="/contact">
-        <li>Contact us
+        <li><i class="far fa-comments"></i> Contact us
             <svg class="w-4 h-4 ml-2  arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
@@ -129,7 +130,7 @@
         </a>
         <% if (condition) { %> 
         <a href="/login">
-            <li>Login
+            <li><i class="fas fa-sign-in-alt"></i> Login
                 <svg class="w-4 h-4 ml-2  arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>

@@ -1,0 +1,23 @@
+.dash-wraper{
+    display: flex;
+}
+.side-nav{
+    height: 90vh;
+    width: 20%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.side-nav .inner-image{
+    background-image: url('https://images.pexels.com/photos/2382325/pexels-photo-2382325.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+}

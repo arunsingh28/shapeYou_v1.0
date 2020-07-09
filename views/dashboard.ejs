@@ -1,3 +1,56 @@
-<h1>Dashboard</h1>
-<p >Welcome <%= user.first_name %> <%= user.last_name %> </p>
-<a href="/logout">Logout</a>
+<% include ./partials/Dash_navBar %>
+ 
+<div class="dash-wraper">
+<div class="side-nav">
+    <ul id="ul">
+        <a href="#"><li id="li"><i class="fas fa-utensils"></i> Diet Plan</li></a>
+        <a href="#"><li id="li"><i class="fas fa-chart-pie"></i> Nutration Value</li></a>
+        <a href="#"><li id="li"><i class="fas fa-comment-dots"></i> Chat</li></a>
+        <a href="#"><li id="li"><i class="fas fa-running"></i> PT</li></a>
+        <a href="#"><li id="li"><i class="fas fa-burn"></i> Burn Caloris</li></a> 
+        <a href="#"><li id="li"><i class="fas fa-cookie-bite"></i> Snakes</li></a> 
+        <a href="#"><li id="li"><i class="fas fa-journal-whills"></i> Dark Knowlege</li></a> 
+    </ul>
+<div class="inner-image"></div>
+</div>
+<div class="main-container">
+    <p>this is user dashboard for creating admin account go to your atlas and there is property name as "type" by default it is set to "user" change it to "admin" or "emp" for login previlage.</p>
+    
+</div>
+</div>
+
+
+<style>
+    .main-container{
+        width: 80%;
+        height: 90vh;
+        background-color: #eee;
+    }
+    #ul{
+    list-style: none;
+    margin-top: 50px;
+    z-index: 9999999;
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+}
+#ul a{
+    text-decoration: none;
+}
+#ul #li{
+    color: aliceblue;
+    margin-top: 3px;
+    padding: 16px 9px;
+    margin-left: -18px;
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+#ul #li:hover{
+    margin-left: -30px;
+    width: 96%;
+    background-color: #1391ff;
+    border: none;
+    border-left: 10px solid #fff;
+    transform: translateX(10px);
+}
+</style>

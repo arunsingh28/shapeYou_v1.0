@@ -56,6 +56,14 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use('/', require('./routes/index.js'));
+app.use('/shape',require('./routes/dash.js'));
+
+// default route or wrong rout
+app.use('/*',(req,res)=>{
+  res.render('404',{
+    title : '404 not Found'
+  })
+})
 
 const PORT = process.env.PORT || 5000;
 

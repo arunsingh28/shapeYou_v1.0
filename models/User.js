@@ -22,22 +22,6 @@ const user = new mongoose.Schema({
         required : true
     },
     // mesurment
-    belly : {
-        type : Number,
-        required : true
-    },
-    arm : {
-        type : Number,
-        required : true
-    },
-    neck : {
-        type : Number,
-        required : true
-    },
-    thigh :{
-        type : Number,
-        required : true
-    },
     height : {
         type : Number,
         required : true
@@ -55,9 +39,51 @@ const user = new mongoose.Schema({
         type : String,
         required : true
     },
+    // personal detail
+    job : {
+        type : String,
+        required : true
+    },
+    job_type:{
+        type : String,
+        required : true
+    },
+    disease :{
+        type : String,
+        required : true
+    },
+    age :{
+        type : String,
+        required : true
+    },
+    // personal food
+    fruit :{
+        type : String,
+        required : true
+    },
+    food :{
+        type : String,
+        required : true
+    },
+    bad_food : {
+        type : String,
+        required : true
+    },
     Date_of_creation : {
-        type : Date,
-        default : Date.now().toString()
+        type : String,
+        default : "No Record Found",
+        required : true
+    },
+    // plans
+    plan : {
+        type : String,
+        required : true,
+        default : "Free"
+    },
+    // admin
+    type : {
+        type : String,
+        default : 'user'
     }
 })
 

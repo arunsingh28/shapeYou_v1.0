@@ -59,8 +59,9 @@ index.get('/user-signup',(req,res)=>{
 
 // registrion algo
 index.post('/user-signup',(req,res)=>{
-  const {first_name,last_name,password,C_password,email,belly,arm,neck,thigh,height,weight,g_weight,goal,phone} = req.body;
-  const newUser = new userDB({first_name,last_name,password,email,belly,arm,neck,thigh,height,weight,g_weight,goal,phone});
+  // console.log(req.body);
+  const {first_name,last_name,password,C_password,email,height,weight,g_weight,goal,phone,plan,job,job_type,disease,age,fruit,food,bad_food,Date_of_creation} = req.body;
+  const newUser = new userDB({first_name,last_name,password,email,height,weight,g_weight,goal,phone,plan,job,job_type,disease,age,fruit,food,bad_food,Date_of_creation});
   let errors = [];
   if(password != C_password){
       errors.push({msg : 'Password Not Matching'})
@@ -69,7 +70,7 @@ index.post('/user-signup',(req,res)=>{
       res.render('index_sign_up', {
           title : 'Sign up',
           condition : true,
-          errors,first_name,last_name,email,belly,arm,neck,thigh,height,weight,g_weight,goal,phone
+          errors,first_name,last_name,email,belly,arm,neck,thigh,height,weight,g_weight,goal,phone,plan,job,job_type,disease,age,fruit,food,bad_food,Date_of_creation
       });
   }else{
       userDB.findOne({email : email},(err,docs)=>{
@@ -79,7 +80,7 @@ index.post('/user-signup',(req,res)=>{
               res.render('index_sign_up',{
                 title : 'Sign up',
                 condition : true,
-                errors,first_name,last_name,belly,arm,neck,thigh,height,weight,g_weight,goal,phone
+                errors,first_name,last_name,belly,arm,neck,thigh,height,weight,g_weight,goal,phone,plan,job,job_type,disease,age,fruit,food,bad_food,Date_of_creation
               });
           }else{
             bcrypt.genSalt(10, (err, salt) => {
@@ -94,7 +95,7 @@ index.post('/user-signup',(req,res)=>{
                     );
                     res.redirect('/login');
                   })
-                  .catch(err =>{
+                  .catch(err => /*console.log(err)*/ {
                     res.render('index_sign_up',{
                       title : 'Sign Up',
                       condition : true,
@@ -135,5 +136,47 @@ index.post('/contact',(req,res)=>{
   });
 })
 
+
+
+// blogs page
+index.get('/blogs',(req,res)=>{
+  res.render('blogs',{
+    title : 'Blogs',
+    condition : true
+  })
+})
+
+//plans
+index.get('/plans',(req,res)=>{
+  res.render('plans',{
+    title :'Plans',
+    condition : true
+  })
+}) 
+
+
+// coming soon
+index.get('/coming-soon',(req,res)=>{
+  res.render('coming_soon',{
+    title : 'Coming Soon',
+    condition : true
+  })
+})
+
+// admin 
+index.get('/emp/Dashboard',(req,res)=>{
+  res.render('empDash',{
+      title : 'Employee',
+      user : req.user
+  })
+})
+
+// emp signup
+index.get('/emp/signup',(req,res)=>{
+  res.render('EmpSign',{
+    title : 'Sign up',
+    condition : false
+  })
+})
 
 module.exports = index;

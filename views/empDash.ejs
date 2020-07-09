@@ -1,0 +1,99 @@
+<% include ./partials/Dash_navBar %>
+ 
+<div class="dash-wraper">
+<div class="side-nav">
+    <ul id="ul">
+        <a href="#"><li id="li"><i class="fas fa-notes-medical"></i> Client Request</li></a>
+        <a href="#"><li id="li"><i class="fas fa-pen"></i> Write Blogs</li></a>
+        <a href="#"><li id="li"><i class="fas fa-comment-dots"></i> Chat</li></a>
+        <a href="#"><li id="li"><i class="fas fa-rupee-sign"></i> Wallet</li></a>
+        <a href="#"><li id="li"><i class="fas fa-rupee-sign"></i> Images</li></a>
+        <a href="#"><li id="li"><i class="far fa-clipboard"></i> Reports</li></a>
+    </ul>
+<div class="inner-image"></div>
+</div>
+<div class="main">
+    <div class="inner-main">
+        <p id="head">Report</p>
+        <div class="pro-img">
+            <img src="https://instagram.fagr1-1.fna.fbcdn.net/v/t51.2885-19/s320x320/106597005_262111315085465_8804361348080145374_n.jpg?_nc_ht=instagram.fagr1-1.fna.fbcdn.net&_nc_ohc=TfsYtrcdivkAX8PN_qM&oh=68ab952ae619faecd3982611c8572e0e&oe=5F302B88" alt="profile images" id="pr">
+        </div>
+        <div class="row">
+            <p id="name"><%=user.first_name%> <%= user.last_name%></p>
+            <p>Total Client Attend : 5 Client</p>   
+            <p>Total Diet Plans : 5 Plans</p>  
+            <p>Time Serving : 5 Hours</p> 
+            <p>Leaves : 2 Day</p> 
+            <p>Salary Status : Paid</p>  
+        </div>
+    </div>
+</div>
+</div>
+
+
+<style>
+    .row{
+        margin-top: 90px;
+        margin-left: 70px;
+    }
+    .row p{
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 5px;
+    }
+    .row #name{
+        font-weight: 900;
+        font-size: 1.6rem;
+        padding-bottom: 20px;
+    }
+    .pro-img{
+        float: left;
+        margin: 60px 30px;   
+    }
+    .main{
+        width: 100%;
+        height: 90vh;
+        background-color: #eee;
+        position: relative;
+    }
+    .inner-main{
+        height: 70vh;
+        width: 80%;
+        /* border: 1px solid blueviolet; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #head{
+       font-size: 1.7rem;
+    }
+   
+    #ul{
+    list-style: none;
+    margin-top: 50px;
+    z-index: 9999999;
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+}
+#ul a{
+    text-decoration: none;
+}
+#ul #li{
+    color: aliceblue;
+    margin-top: 3px;
+    padding: 16px 9px;
+    margin-left: -18px;
+    width: 100%;
+    transition: .2s ease-in-out;
+}
+#ul #li:hover{
+    margin-left: -30px;
+    width: 96%;
+    background-color: #1391ff;
+    border: none;
+    border-left: 10px solid #fff;
+    transform: translateX(10px);
+}
+</style>

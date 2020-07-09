@@ -17,7 +17,7 @@
             <input type="text" name="title" id="title" required>
         </div>
         <div class="message">
-            <label for="message">Message</label>
+            <label for="message" id="mes">Message</label>
             <textarea name="message" id="message" cols="70" rows="10" required></textarea>
         </div>
         <button type="submit">Send</button>
@@ -45,13 +45,16 @@
       .contact-message{
           position: absolute;   
           top: 50%;
-          height: 300px;
+          height: 436px;
           width: 700px;
           color: rgb(0, 0, 0);
+          background: #607d8d;
       }
       .contact-message p{
-          text-align: center;
-          font-size: 1.2rem;
+          color: #fff;
+          margin-left: 15px;
+          text-align: start;
+          font-size: 1.7rem;
           font-family: 'Teko', sans-serif;
       }
       .contact-message form{
@@ -60,16 +63,26 @@
       .title{
           position: absolute;
           display: flow-root;
-          transform: translate(170px,15px);
+          transform: translate(22px,15px);
+          color: #fff;
+      }
+      textarea{
+        width: 80%;
+        margin-left: 20px;
       }
       .message{
         display: grid;
         position: inherit;
         transform: translateY(100px);
       }
+      #mes{
+    margin-left: 16px;
+    margin-bottom: 8px;
+    color: #fff;
+      }
       form button{
           position: absolute;
-          top: 170%;
+          top: 168%;
           left: 40%;
           padding: 8px 60px;
           box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
