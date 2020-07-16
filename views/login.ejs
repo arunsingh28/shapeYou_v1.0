@@ -16,12 +16,22 @@
     <div class="account">
       <p>Don't Have an Account <a href="/user-signup">Create here</a></p>
     </div>
+    <input type="text" id="week" style="display: none;" value="">
     <button type="submit">Login</button>
   </form>
   </main>
   <p>ShapeYou.in @2020</p>
   <% include ./partials/messages %>
 </div>
+
+<script>
+  function week(){
+    var w = new Date()
+    let d = w.getDay();
+    document.getElementById('week').value = d;
+  }
+  week();
+</script>
 
 <style>
   .login_form{

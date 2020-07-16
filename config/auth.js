@@ -1,4 +1,6 @@
 
+// bring model
+const userDB = require('../models/User');
 module.exports = {
   ensureAuthenticated: function(req, res, next) {
     if (req.isAuthenticated()) {
@@ -13,14 +15,24 @@ module.exports = {
     }
     // user dashboard
     if(req.user.type == 'user'){
-      res.redirect('/dashboard');
+        var t = new Date();
+        var todayDate = t.getDate();
+          if(req.user.membership <= todayDate){
+            res.redirect('/update-plan')
+          }
+          if(req.user.disable == true){
+            res.redirect('/setting')
+          }else{
+            res.redirect('/dashboard')
+          }
     }
     // for emp
     if(req.user.type == 'emp'){
+      console.log(req.user)
       res.redirect('/emp/Dashboard')
     }
     // admin dashboard
-    else{
+   if(req.user.type == 'admin'){
       res.redirect('/admin/dashboard')
     }  
   }

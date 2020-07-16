@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
+const multer = require('multer');
+const path = require('path');
 
 const app = express();
 
@@ -56,7 +58,8 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use('/', require('./routes/index.js'));
-app.use('/shape',require('./routes/dash.js'));
+app.use('/emp',require('./routes/EmpDash.js'));
+app.use('/user', require('./routes/userDash'));
 
 // default route or wrong rout
 app.use('/*',(req,res)=>{

@@ -84,7 +84,80 @@ const user = new mongoose.Schema({
     type : {
         type : String,
         default : 'user'
+    },
+    // action
+    action :{
+        type : String,
+        default : 'Free'
+    },
+    taker : {
+        type : String,
+        default : 'Free'
+    },
+    // memberShip
+    membership : {
+        type : Number,
+        default : 0
+    },
+    profile_image : {
+        type : String,
+        default : 'not'
+    },
+     // record images
+    image: {
+        type : String,
+        default : 'Default.jpg'
+    },
+    week1 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    week2 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    week3 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    week4 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    week5 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    week6 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    week7 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    week8 : {
+        type : String,
+        default : 'default.jpg'
+    },
+    pro_report : {
+        type : String,
+        default : 'Just Started'
+    },
+    // chat
+    chat : {
+        type : String
+    },
+    diet : {
+        type : Boolean,
+        default : true
+    },
+    // disable 
+    disable : {
+        type : Boolean,
+        default : false
     }
+    
 })
 
 module.exports = mongoose.model('Users', user);

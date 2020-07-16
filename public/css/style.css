@@ -14,13 +14,21 @@
     box-sizing: content-box;
     font-family: 'Rajdhani', sans-serif;
 }
-#bar{
+#bar1{
     height: 30px;
     width: 30px;
     cursor: pointer;
     position: absolute;
     top: 4%;
     left: 3%;
+}
+#bar{
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  left: 3%;
 }
 /* menu */
 .menu{

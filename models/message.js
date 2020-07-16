@@ -9,8 +9,12 @@ const message = new mongoose.Schema({
         required : true
     },
     Date_of_Post : {
-        type : Date,
-        default : Date.now
+        type : String,
+        required : true   
+    },
+    email : {
+        type : String,
+        required : true
     }
 })
 

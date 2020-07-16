@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const emp = new mongoose.Schema({
     date_of_creation : {
         type : String,
@@ -12,36 +13,60 @@ const emp = new mongoose.Schema({
         type : String,
         required : true
     },
+    password : {
+        type : String,
+        required : true
+    },
+    email : {
+        type : String,
+        required : true
+    },
+    phone : {
+        type : String,
+        required : true
+    },
     address : {
         type : String,
         required : true
     },
-    s_status : {
+    state : {
         type : String,
         required : true
     },
-    t_client : {
+    pin_code : {
         type : Number,
-        required : true,
-        default : 0
+        required : true
     },
-    t_diet : {
-        type : Number,
-        required : true,
-        default : 0
+    s_status : {
+        type : String,
+        default : 'New Joining'
     },
     leaves : {
-        type : Number,
-        required : true,
-        default : 0
+        type : String,
+        default : "0"
     },
     education : {
         type : String,
         required : true
     },
     salary : {
-        type : Number,
-        default : 0
+        type : String,
+        default : "0"
+    },
+    when : {
+        type : String,
+        required : true
+    },
+    specialist :{
+        type : String,
+        required : true
+    },
+    type : {
+        type : String,
+        default : 'emp'
+    },
+    client : {
+        type : String
     }
 })
 
